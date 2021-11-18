@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="media.css">
+</head>
+<body>
+  <pre>
+    const arr = [7, 1, 6, "abc", undefined, NaN, null, 0];
+
+    let sumOdd = 0;
+    let sumEven = 0;
+    let Nul = 0;
+    let n = 0;
+    
+    for (i = 0; i %3C arr.length; i++){
+       if (typeof arr[i] === "number" && arr[i] % 2 === 0 && !isNaN(arr[i])){
+          sumEven++;
+        };
+      if (typeof arr[i] === "number" && arr[i] % 2 !== 0 && !isNaN(arr[i])){
+          sumOdd++;
+        } ;
+      if(arr[i] === 0){
+          Nul++;
+        };
+      if(arr[i] === null){
+         n++;
+        };
+       if (arr[i] !== arr[i]) {
+            console.log('Element ' + i + ' is NaN');
+        }
+    }
+    
+    console.log("Odd : " + sumOdd);
+    console.log("Even : " + sumEven);
+    console.log("Nul : " + Nul);
+    console.log("null : " + n);      
+    </pre>
+</body>
+</html>
